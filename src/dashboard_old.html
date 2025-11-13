@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load-Aware Proxy Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .stat-box {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 8px;
+            flex: 1;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .status-ok { color: #4CAF50; }
+        .status-unhealthy { color: #f44336; }
+
+        table {
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #2c3e50;
+            color: white;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-static {
+            background: #3498db;
+            color: white;
+        }
+
+        .badge-discoverable {
+            background: #9b59b6;
+            color: white;
+        }
+
+        .health-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .health-healthy {
+            background: #4CAF50;
+        }
+
+        .health-unhealthy {
+            background: #f44336;
+        }
+
+        .latency {
+            font-family: 'Courier New', monospace;
+        }
+
+        .latency-good { color: #4CAF50; }
+        .latency-ok { color: #ff9800; }
+        .latency-bad { color: #f44336; }
+        .latency-unknown { color: #999; }
+
+        .last-updated {
+            text-align: right;
+            color: #6c757d;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .config-info {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .config-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .config-item {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+
+        .config-label {
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .config-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .url-text {
+            font-size: 12px;
+            color: #6c757d;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Load-Aware Proxy Dashboard</h1>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-label">Status</div>
+                    <div class="stat-value" id="overallStatus">Loading...</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Healthy Nodes</div>
+                    <div class="stat-value" id="healthyNodes">-</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Total Requests</div>
+                    <div class="stat-value" id="totalRequests">-</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Uptime</div>
+                    <div class="stat-value" id="uptime">-</div>
+                </div>
+            </div>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Node Name</th>
+                    <th>Type</th>
+                    <th>Health</th>
+                    <th>Comet RPC Latency</th>
+                    <th>JSON-RPC Latency</th>
+                    <th>Requests</th>
+                    <th>Failures</th>
+                </tr>
+            </thead>
+            <tbody id="nodesTable">
+                <tr>
+                    <td colspan="7" style="text-align: center; padding: 40px;">Loading...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="last-updated" id="lastUpdated">Last updated: Never</div>
+
+        <div class="config-info">
+            <h2 style="margin-bottom: 10px;">Configuration</h2>
+            <div class="config-grid" id="configGrid">
+                <div class="config-item">
+                    <div class="config-label">Loading...</div>
+                    <div class="config-value">-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function formatLatency(latency) {
+            if (latency === null || latency === undefined) {
+                return '<span class="latency latency-unknown">N/A</span>';
+            }
+            const value = latency.toFixed(2);
+            let cssClass = 'latency-good';
+            if (latency > 200) cssClass = 'latency-bad';
+            else if (latency > 50) cssClass = 'latency-ok';
+            return `<span class="latency ${cssClass}">${value} ms</span>`;
+        }
+
+        function formatUptime(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            return `${hours}h ${minutes}m ${secs}s`;
+        }
+
+        async function updateDashboard() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+
+                // Update overall stats
+                const healthyCount = data.nodes.filter(n => n.is_healthy).length;
+                document.getElementById('overallStatus').textContent = healthyCount > 0 ? 'OK' : 'Unhealthy';
+                document.getElementById('overallStatus').className = 'stat-value ' + (healthyCount > 0 ? 'status-ok' : 'status-unhealthy');
+                document.getElementById('healthyNodes').textContent = `${healthyCount} / ${data.nodes.length}`;
+                document.getElementById('totalRequests').textContent = (data.total_comet_requests + data.total_json_rpc_requests).toLocaleString();
+                document.getElementById('uptime').textContent = formatUptime(data.uptime_seconds);
+
+                // Update nodes table
+                const tbody = document.getElementById('nodesTable');
+                tbody.innerHTML = data.nodes.map(node => `
+                    <tr>
+                        <td>
+                            <strong>${node.name}</strong>
+                            <div class="url-text">${node.comet_rpc_url}</div>
+                        </td>
+                        <td>
+                            <span class="badge badge-${node.node_type}">${node.node_type}</span>
+                        </td>
+                        <td>
+                            <span class="health-indicator health-${node.is_healthy ? 'healthy' : 'unhealthy'}"></span>
+                            ${node.is_healthy ? 'Healthy' : 'Unhealthy'}
+                        </td>
+                        <td>${formatLatency(node.comet_rpc_latency_ms)}</td>
+                        <td>${formatLatency(node.json_rpc_latency_ms)}</td>
+                        <td>${node.request_count.toLocaleString()}</td>
+                        <td>${node.consecutive_failures} / ${node.times_marked_unhealthy}</td>
+                    </tr>
+                `).join('');
+
+                // Update config
+                const configGrid = document.getElementById('configGrid');
+                configGrid.innerHTML = `
+                    <div class="config-item">
+                        <div class="config-label">Health Check Interval</div>
+                        <div class="config-value">${data.config.health_check_interval_sec}s</div>
+                    </div>
+                    <div class="config-item">
+                        <div class="config-label">Discovery Interval</div>
+                        <div class="config-value">${data.config.discovery_interval_sec}s</div>
+                    </div>
+                    <div class="config-item">
+                        <div class="config-label">Failure Threshold</div>
+                        <div class="config-value">${data.config.health_failure_threshold}</div>
+                    </div>
+                    <div class="config-item">
+                        <div class="config-label">Removal Threshold</div>
+                        <div class="config-value">${data.config.unhealthy_removal_threshold}</div>
+                    </div>
+                    <div class="config-item">
+                        <div class="config-label">EMA Alpha</div>
+                        <div class="config-value">${data.config.ema_alpha}</div>
+                    </div>
+                `;
+
+                // Update last updated time
+                document.getElementById('lastUpdated').textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+            } catch (error) {
+                console.error('Failed to update dashboard:', error);
+            }
+        }
+
+        // Update immediately and then every 3 seconds
+        updateDashboard();
+        setInterval(updateDashboard, 3000);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,809 @@
+nohup: ignoring input
+    Finished `release` profile [optimized] target(s) in 0.31s
+     Running `target\release\load-aware-proxy.exe`
+[2m2025-11-12T15:08:59.216655Z[0m [32m INFO[0m 🚀 Starting Load-Aware Reverse Proxy
+[2m2025-11-12T15:08:59.216733Z[0m [32m INFO[0m Configuration loaded successfully
+[2m2025-11-12T15:08:59.216848Z[0m [32m INFO[0m HTTP client initialized with 10000ms timeout
+[2m2025-11-12T15:08:59.216877Z[0m [32m INFO[0m Node pool created
+[2m2025-11-12T15:08:59.216895Z[0m [32m INFO[0m Adding 1 static nodes
+[2m2025-11-12T15:08:59.216918Z[0m [32m INFO[0m Added static node: static-https://rpc-mezame.shardeum.org (DNS: true)
+[2m2025-11-12T15:08:59.216937Z[0m [32m INFO[0m Load balancer initialized
+[2m2025-11-12T15:08:59.217355Z[0m [32m INFO[0m Node discovery disabled
+[2m2025-11-12T15:08:59.217375Z[0m [32m INFO[0m Starting health monitoring (interval: 30s, failure threshold: 3)
+[2m2025-11-12T15:08:59.217401Z[0m [32m INFO[0m Starting health check loop
+[2m2025-11-12T15:08:59.217776Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:08:59.217981Z[0m [34mDEBUG[0m starting new connection: https://rpc-mezame.shardeum.org/
+[2m2025-11-12T15:08:59.226143Z[0m [34mDEBUG[0m connecting to [2606:4700:10::6814:1bd0]:443
+[2m2025-11-12T15:08:59.398242Z[0m [34mDEBUG[0m connected to [2606:4700:10::6814:1bd0]:443
+[2m2025-11-12T15:08:59.720753Z[0m [32m INFO[0m Initial node status: 1/1 nodes healthy
+[2m2025-11-12T15:08:59.720820Z[0m [32m INFO[0m Starting HTTP server on port 8080
+[2m2025-11-12T15:08:59.720839Z[0m [32m INFO[0m Dashboard available at: http://0.0.0.0:8080/
+[2m2025-11-12T15:08:59.720851Z[0m [32m INFO[0m Comet RPC endpoint: http://0.0.0.0:8080/rpc
+[2m2025-11-12T15:08:59.720862Z[0m [32m INFO[0m JSON-RPC endpoint: http://0.0.0.0:8080/json-rpc
+[2m2025-11-12T15:09:00.237495Z[0m [34mDEBUG[0m starting new connection: https://gcp.api-mezame.shardeum.org/
+[2m2025-11-12T15:09:00.237600Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:09:00.243292Z[0m [34mDEBUG[0m connecting to 34.102.168.67:443
+[2m2025-11-12T15:09:00.258395Z[0m [34mDEBUG[0m connected to 34.102.168.67:443
+[2m2025-11-12T15:09:01.715584Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:09:01.715668Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:09:01.715681Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:09:29.219790Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:09:29.219934Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:09:30.219940Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:09:30.220051Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:09:30.446519Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:09:30.446587Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:09:30.446599Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:09:59.227092Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:09:59.227300Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:09:59.472148Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:09:59.472254Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:09:59.706442Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:09:59.706517Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:09:59.706529Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:10:29.232934Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:10:29.233148Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:10:29.455055Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:10:29.455142Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:10:29.683476Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:10:29.683565Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:10:29.683578Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:10:59.249616Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:10:59.249896Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:10:59.468932Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:10:59.469019Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:10:59.700373Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:10:59.700464Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:10:59.700476Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:11:29.258719Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:11:29.258874Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:11:29.497402Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:11:29.497526Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:11:29.735829Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:11:29.735897Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:11:29.735907Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:11:59.269676Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:11:59.269809Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:11:59.507757Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:11:59.508001Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:11:59.750784Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:11:59.750872Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:11:59.750884Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:12:29.276647Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:12:29.276867Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:12:29.516303Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:12:29.516400Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:12:29.743230Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:12:29.743294Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:12:29.743305Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:12:59.286367Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:12:59.286516Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:12:59.548153Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:12:59.548306Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:13:00.189100Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:13:00.189187Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:13:00.189199Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:13:29.301811Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:13:29.301977Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:13:29.559630Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:13:29.559736Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:13:29.787349Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:13:29.787422Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:13:29.787435Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:13:59.309701Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:13:59.309969Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:13:59.530703Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:13:59.530830Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:13:59.766173Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:13:59.766301Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:13:59.766330Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:14:29.314694Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:14:29.314869Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:14:29.554961Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:14:29.555055Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:14:29.783337Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:14:29.783409Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:14:29.783421Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:14:59.314454Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:14:59.314596Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:14:59.550330Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:14:59.550450Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:14:59.781008Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:14:59.781109Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:14:59.781128Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:15:29.322627Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:15:29.322802Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:15:29.560667Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:15:29.789381Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:15:29.789488Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:15:29.789499Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:15:59.328702Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:15:59.328830Z[0m [34mDEBUG[0m starting new connection: https://rpc-mezame.shardeum.org/
+[2m2025-11-12T15:15:59.329717Z[0m [34mDEBUG[0m connecting to [2606:4700:10::6814:1bd0]:443
+[2m2025-11-12T15:15:59.338996Z[0m [34mDEBUG[0m connected to [2606:4700:10::6814:1bd0]:443
+[2m2025-11-12T15:15:59.603551Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:15:59.603642Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:15:59.837261Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:15:59.837333Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:15:59.837347Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:16:29.333597Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:16:29.333733Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:16:29.548608Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:16:29.548693Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:16:29.778032Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:16:29.778112Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:16:29.778123Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:16:59.328847Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:16:59.328986Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:16:59.551042Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:16:59.551173Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:16:59.779544Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:16:59.779644Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:16:59.779660Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:17:29.332388Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:17:29.332512Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:17:29.673899Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:17:29.674002Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:17:30.433321Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:17:30.433429Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:17:30.433447Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:17:59.331714Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:17:59.331832Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:17:59.550290Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:17:59.550381Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:17:59.780715Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:17:59.780797Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:17:59.780809Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:18:29.330657Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:18:29.330789Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:18:29.550284Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:18:29.550380Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:18:29.781120Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:18:29.781186Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:18:29.781196Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:18:59.341609Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:18:59.341770Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:18:59.558956Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:18:59.559055Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:18:59.787080Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:18:59.787153Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:18:59.787165Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:19:29.343392Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:19:29.343521Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:19:29.558276Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:19:29.558373Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:19:29.791121Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:19:29.791213Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:19:29.791226Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:19:59.352472Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:19:59.352615Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:19:59.573727Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:19:59.573828Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:19:59.801508Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:19:59.801575Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:19:59.801585Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:20:29.353320Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:20:29.353437Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:20:29.586794Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:20:29.586899Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:20:29.816029Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:20:29.816166Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:20:29.816178Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:20:59.359147Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:20:59.359296Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:20:59.581714Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:20:59.809324Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:20:59.809418Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:20:59.809434Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:21:29.367118Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:21:29.367333Z[0m [34mDEBUG[0m starting new connection: https://rpc-mezame.shardeum.org/
+[2m2025-11-12T15:21:29.539254Z[0m [34mDEBUG[0m connecting to [2606:4700:10::6814:1bd0]:443
+[2m2025-11-12T15:21:29.543401Z[0m [34mDEBUG[0m connected to [2606:4700:10::6814:1bd0]:443
+[2m2025-11-12T15:21:30.614382Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:21:30.614499Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:21:30.986962Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:21:30.987044Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:21:30.987057Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:21:59.375948Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:21:59.376070Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:21:59.589260Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:21:59.589351Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:21:59.818377Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:21:59.818469Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:21:59.818483Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:22:29.390091Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:22:29.390242Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:22:29.629128Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:22:29.629219Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:22:29.865130Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:22:29.865201Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:22:29.865214Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:22:59.395951Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:22:59.396063Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:22:59.617619Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:22:59.617712Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:22:59.869383Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:22:59.869459Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:22:59.869473Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:23:29.403468Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:23:29.403592Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:23:29.648915Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:23:29.880186Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:23:29.880273Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:23:29.880288Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:23:59.411734Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:23:59.411871Z[0m [34mDEBUG[0m starting new connection: https://rpc-mezame.shardeum.org/
+[2m2025-11-12T15:23:59.417836Z[0m [34mDEBUG[0m connecting to [2606:4700:10::6814:1bd0]:443
+[2m2025-11-12T15:23:59.422197Z[0m [34mDEBUG[0m connected to [2606:4700:10::6814:1bd0]:443
+[2m2025-11-12T15:23:59.663464Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:23:59.663587Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:23:59.892805Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:23:59.892877Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:23:59.892886Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:24:29.417997Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:24:29.418156Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:24:29.657206Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:24:29.657332Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:24:29.889596Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:24:29.889733Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:24:29.889750Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:24:59.433637Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:24:59.433775Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:24:59.652831Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:24:59.652937Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:24:59.902038Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:24:59.902113Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:24:59.902122Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:25:29.444130Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:25:29.444241Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:25:29.960830Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:25:29.960932Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:25:30.327699Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:25:30.327771Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:25:30.327781Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:25:59.444868Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:25:59.445003Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:25:59.681833Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:25:59.681933Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:25:59.911608Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:25:59.911721Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:25:59.911735Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:26:29.450482Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:26:29.450600Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:26:29.677940Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:26:29.678140Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:26:29.908975Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:26:29.909088Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:26:29.909131Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:26:59.462843Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:26:59.463041Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:26:59.684478Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:26:59.684583Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:26:59.917363Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:26:59.917459Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:26:59.917476Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:27:29.476711Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:27:29.476821Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:27:29.703852Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:27:29.703989Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:27:29.935429Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:27:29.935496Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:27:29.935516Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:27:59.485593Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:27:59.485735Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:27:59.735617Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:27:59.735696Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:27:59.968554Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:27:59.968630Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:27:59.968644Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:28:29.501965Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:28:29.502121Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:28:29.783738Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:28:29.783833Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:28:30.053993Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:28:30.054072Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:28:30.054084Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:28:59.518407Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:28:59.518535Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:28:59.788117Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:28:59.788212Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:29:00.037229Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:29:00.037336Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:29:00.037354Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:29:29.523189Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:29:29.523303Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:29:29.869319Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:29:29.869440Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:29:30.128215Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:29:30.128298Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:29:30.128311Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:29:59.521149Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:29:59.521254Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:29:59.793844Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:29:59.793967Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:30:00.047879Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:30:00.048003Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:30:00.048025Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:30:29.531791Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:30:29.531904Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:30:29.761609Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:30:29.761734Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:30:29.996244Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:30:29.996321Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:30:29.996331Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:30:59.547751Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:30:59.547867Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:30:59.933951Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:30:59.934059Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:31:00.253052Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:31:00.253145Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:31:00.253158Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:31:29.549234Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:31:29.549369Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:31:29.772189Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:31:29.772293Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:31:30.002390Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:31:30.002486Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:31:30.002501Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:31:59.564019Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:31:59.564140Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:31:59.838230Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:31:59.838343Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:32:00.085261Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:32:00.085349Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:32:00.085370Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:32:29.570560Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:32:29.570669Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:32:29.785071Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:32:29.785157Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:32:30.013612Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:32:30.013684Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:32:30.013697Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:32:59.580966Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:32:59.581108Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:32:59.798093Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:32:59.798172Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:33:00.026776Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:33:00.026857Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:33:00.026870Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:33:29.584407Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:33:29.584544Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:33:29.995701Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:33:29.995806Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:33:30.224804Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:33:30.224881Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:33:30.224893Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:33:59.591181Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:33:59.591309Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:33:59.814327Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:33:59.814428Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:34:00.044797Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:34:00.044880Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:34:00.044892Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:34:29.597521Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:34:29.597673Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:34:29.835283Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:34:29.835374Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:34:30.065836Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:34:30.065910Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:34:30.065923Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:34:59.604039Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:34:59.604170Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:34:59.823996Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:34:59.824148Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:35:00.071483Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:35:00.071571Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:35:00.071584Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:35:29.618637Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:35:29.618773Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:35:29.858594Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:35:29.858691Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:35:30.087512Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:35:30.087588Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:35:30.087601Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:35:59.629670Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:35:59.629841Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:35:59.860235Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:35:59.860336Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:36:00.091669Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:36:00.091742Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:36:00.091754Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:36:29.642642Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:36:29.642762Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:36:29.874873Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:36:29.874971Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:36:30.129565Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:36:30.129652Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:36:30.129668Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:36:59.643685Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:36:59.643806Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:36:59.863235Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:36:59.863351Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:37:00.091950Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:37:00.092084Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:37:00.092104Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:37:29.646875Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:37:29.647000Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:37:29.890443Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:37:29.890571Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:37:30.138346Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:37:30.138432Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:37:30.138455Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:37:59.654739Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:37:59.654836Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:37:59.879740Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:37:59.879824Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:38:00.125495Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:38:00.125569Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:38:00.125581Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:38:29.670157Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:38:29.670293Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:38:29.909122Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:38:29.909217Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:38:30.138189Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:38:30.138262Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:38:30.138275Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:38:59.673793Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:38:59.673896Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:38:59.892571Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:38:59.892650Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:39:00.130920Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:39:00.130995Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:39:00.131008Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:39:29.676708Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:39:29.676828Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:39:29.925968Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:39:29.926077Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:39:30.158360Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:39:30.158431Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:39:30.158440Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:39:59.680405Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:39:59.680531Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:40:00.441999Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:40:00.442154Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:40:00.677781Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:40:00.677876Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:40:00.677904Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:40:29.688213Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:40:29.688341Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:40:29.946491Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:40:29.946591Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:40:30.210418Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:40:30.210500Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:40:30.210514Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:40:59.698498Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:40:59.698602Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:40:59.920044Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:40:59.920130Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:41:00.150638Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:41:00.150711Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:41:00.150724Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:41:29.703913Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:41:29.704035Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:41:30.112230Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:41:30.112327Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:41:30.342690Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:41:30.342777Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:41:30.342792Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:41:59.709044Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:41:59.709187Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:41:59.924442Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:41:59.924534Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:42:00.173098Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:42:00.173173Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:42:00.173186Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:42:29.712447Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:42:29.712561Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:42:29.970270Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:42:29.970356Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:42:30.198235Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:42:30.198305Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:42:30.198317Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:42:59.716359Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:42:59.716459Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:42:59.930671Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:42:59.930770Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:43:00.164276Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:43:00.164369Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:43:00.164387Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:43:29.718993Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:43:29.719103Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:43:29.963512Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:43:29.963610Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:43:30.214274Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:43:30.214354Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:43:30.214367Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:43:59.723460Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:43:59.723569Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:43:59.949217Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:43:59.949315Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:44:00.177597Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:44:00.177668Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:44:00.177681Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:44:29.734042Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:44:29.734182Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:44:30.059875Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:44:30.059996Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:44:31.005202Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:44:31.005273Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:44:31.005285Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:44:59.743525Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:44:59.743641Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:44:59.963885Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:44:59.963963Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:45:00.195580Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:45:00.195668Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:45:00.195681Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:45:29.746166Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:45:29.746285Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:45:30.088006Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:45:30.088113Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:45:30.451453Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:45:30.451528Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:45:30.451538Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:45:59.757003Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:45:59.757156Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:45:59.983986Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:45:59.984090Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:46:00.213375Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:46:00.213453Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:46:00.213465Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:46:29.769225Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:46:29.769336Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:46:30.010208Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:46:30.010301Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:46:30.270830Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:46:30.270907Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:46:30.270920Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:46:59.781314Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:46:59.781465Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:47:00.012899Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:47:00.012999Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:47:00.242125Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:47:00.242205Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:47:00.242218Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:47:29.797528Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:47:29.797684Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:47:30.032389Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:47:30.032476Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:47:30.264186Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:47:30.264263Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:47:30.264276Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:47:59.808111Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:47:59.808230Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:48:00.027751Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:48:00.027850Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:48:00.260149Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:48:00.260223Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:48:00.260236Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:48:29.814119Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:48:29.814244Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:48:30.053299Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:48:30.053388Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:48:30.293754Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:48:30.293837Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:48:30.293852Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:48:59.829688Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:48:59.829792Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:49:00.050001Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:49:00.050107Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:49:00.285318Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:49:00.285385Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:49:00.285397Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:49:29.833983Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:49:29.834125Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:49:30.145233Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:49:30.145333Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:49:30.376537Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:49:30.376618Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:49:30.376630Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:49:59.844019Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:49:59.844133Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:50:00.071565Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:50:00.071674Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:50:00.301991Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:50:00.302091Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:50:00.302106Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:50:29.853012Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:50:29.853145Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:50:30.096470Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:50:30.096566Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:50:30.331321Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:50:30.331402Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:50:30.331414Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:50:59.857908Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:50:59.858016Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:51:00.080468Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:51:00.080561Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:51:00.312341Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:51:00.312421Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:51:00.312433Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:51:29.861805Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:51:29.861959Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:51:30.103476Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:51:30.103577Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:51:30.344103Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:51:30.344193Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:51:30.344209Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:51:59.877612Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:51:59.877737Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:52:00.100114Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:52:00.100210Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:52:00.337973Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:52:00.338084Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:52:00.338101Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:52:29.892151Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:52:29.892252Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:52:30.138473Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:52:30.138599Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:52:30.374612Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:52:30.374676Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:52:30.374686Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:52:59.907576Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:52:59.907785Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:53:00.127948Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:53:00.128057Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:53:00.359199Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:53:00.359280Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:53:00.359293Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:53:29.911215Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:53:29.911335Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:53:30.308118Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:53:30.308215Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:53:30.639243Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:53:30.639321Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:53:30.639334Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:53:59.924120Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:53:59.924282Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:54:00.151008Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:54:00.151108Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:54:00.379551Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:54:00.379628Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:54:00.379643Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:54:29.934097Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:54:29.934214Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:54:30.173205Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:54:30.173299Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:54:30.403530Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:54:30.403608Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:54:30.403621Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:54:59.937649Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:54:59.937758Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:55:00.157622Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:55:00.157740Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:55:00.389583Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:55:00.389670Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:55:00.389684Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:55:29.943150Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:55:29.943275Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:55:30.181144Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:55:30.181259Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:55:30.412181Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:55:30.412258Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:55:30.412270Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:55:59.951565Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:55:59.951689Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:56:00.183443Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:56:00.183561Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:56:00.412274Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:56:00.412353Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:56:00.412365Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:56:29.963668Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:56:29.963796Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:56:30.194978Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:56:30.195075Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:56:30.426058Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:56:30.426130Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:56:30.426140Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:56:59.970846Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:56:59.970986Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:57:00.213774Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:57:00.213866Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:57:00.444223Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:57:00.444313Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:57:00.444335Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:57:29.983533Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:57:29.983659Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:57:30.330769Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:57:30.330885Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:57:30.561551Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:57:30.561631Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:57:30.561644Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:57:59.997832Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:57:59.997959Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:58:00.216480Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:58:00.216614Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:58:00.448679Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:58:00.448759Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:58:00.448771Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:58:30.005534Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:58:30.005682Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:58:30.244904Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:58:30.245006Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:58:30.475746Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:58:30.475820Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:58:30.475832Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:59:00.012391Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:59:00.012553Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:59:00.233926Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:59:00.234039Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:59:00.463370Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:59:00.463452Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:59:00.463465Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T15:59:30.020424Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T15:59:30.020545Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:59:30.259369Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T15:59:30.259469Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:59:30.496911Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T15:59:30.496993Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T15:59:30.497008Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T16:00:00.022470Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T16:00:00.022590Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:00:00.239600Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:00:00.470906Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:00:00.470987Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T16:00:00.470999Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T16:00:30.026457Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T16:00:30.026658Z[0m [34mDEBUG[0m starting new connection: https://rpc-mezame.shardeum.org/
+[2m2025-11-12T16:00:30.149930Z[0m [34mDEBUG[0m connecting to [2606:4700:10::ac42:94a3]:443
+[2m2025-11-12T16:00:30.153721Z[0m [34mDEBUG[0m connected to [2606:4700:10::ac42:94a3]:443
+[2m2025-11-12T16:00:30.411263Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:00:30.411350Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:00:30.643783Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:00:30.643848Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T16:00:30.643858Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T16:01:00.033701Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T16:01:00.033909Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:01:00.248173Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:01:00.248293Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:01:00.486926Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:01:00.487001Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T16:01:00.487014Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T16:01:30.044825Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T16:01:30.045064Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:01:30.285335Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:01:30.285427Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:01:30.516920Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:01:30.516990Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T16:01:30.517001Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T16:02:00.051762Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T16:02:00.051874Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:02:00.781339Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:02:00.781460Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:02:01.016843Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:02:01.016928Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T16:02:01.016940Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T16:02:30.057477Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T16:02:30.057624Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:02:30.294346Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:02:30.294449Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:02:30.524917Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:02:30.524989Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T16:02:30.525002Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T16:03:00.072160Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T16:03:00.072349Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:03:00.296918Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:03:00.297007Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:03:00.528978Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:03:00.529066Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T16:03:00.529081Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T16:03:30.077659Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T16:03:30.077817Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:03:30.307754Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:03:30.307882Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:03:30.540959Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:03:30.541068Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T16:03:30.541086Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T16:04:00.082442Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T16:04:00.082569Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:04:00.297858Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:04:00.297968Z[0m [34mDEBUG[0m pooling idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:04:00.533154Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:04:00.533262Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T16:04:00.533283Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy
+[2m2025-11-12T16:04:30.078843Z[0m [34mDEBUG[0m Performing health checks on 1 nodes
+[2m2025-11-12T16:04:30.078988Z[0m [34mDEBUG[0m reuse idle connection for ("https", rpc-mezame.shardeum.org)
+[2m2025-11-12T16:04:30.301476Z[0m [34mDEBUG[0m reuse idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:04:31.415793Z[0m [34mDEBUG[0m pooling idle connection for ("https", gcp.api-mezame.shardeum.org)
+[2m2025-11-12T16:04:31.415907Z[0m [34mDEBUG[0m Node static-https://rpc-mezame.shardeum.org is healthy
+[2m2025-11-12T16:04:31.415924Z[0m [34mDEBUG[0m Health check complete: 1/1 nodes healthy

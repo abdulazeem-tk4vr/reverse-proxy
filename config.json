@@ -1,0 +1,37 @@
+{
+  "verbose": true,
+  "http_port": 8080,
+  "is_static": true,
+  "enable_discovery": false,
+  "discovery_interval_sec": 300,
+  "health_check_interval_sec": 30,
+  "health_failure_threshold": 3,
+  "unhealthy_removal_threshold": 3,
+  "request_retry_count": 2,
+  "ema_alpha": 0.3,
+  "request_timeout_ms": 5000,
+  "expected_json_rpc_port": 8545,
+  "static_nodes": [
+    {
+      "comet_rpc_url": "https://rpc-mezame.shardeum.org",
+      "json_rpc_url": "https://gcp.api-mezame.shardeum.org",
+      "is_dns": true
+    },
+    {
+      "comet_rpc_url": "http://localhost:26658",
+      "json_rpc_url": "http://localhost:8547",
+      "is_dns": false
+    },
+    {
+      "comet_rpc_url": "http://localhost:26659",
+      "json_rpc_url": "http://localhost:8549",
+      "is_dns": false
+    },
+    {
+      "comet_rpc_url": "http://localhost:26660",
+      "json_rpc_url": "http://localhost:8551",
+      "is_dns": false
+    }
+  ],
+  "discoverable_nodes": []
+}

@@ -1,0 +1,23 @@
+# Rust
+/target/
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+requests.db
+*.db
+*.db-shm
+*.db-wal
+
+# Config (optional - uncomment if you don't want to commit config)
+# config.json

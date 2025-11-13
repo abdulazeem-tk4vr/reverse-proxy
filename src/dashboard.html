@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load-Aware Proxy Dashboard</title>
+    <style>
+        /* Modern Color Palette inspired by cosmos-rewards-app */
+        :root {
+            --primary-color: #3042FB;
+            --primary-hover: #1e2ce6;
+            --primary-light: rgba(48, 66, 251, 0.08);
+            --background-color: #FCFAEF;
+            --background-soft: #F8F6F0;
+            --surface-color: #ffffff;
+            --surface-elevated: #fdfdfd;
+            --text-primary: #0f1419;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --border-color: #e2e8f0;
+            --border-light: #f1f5f9;
+            --success-color: #059669;
+            --success-light: rgba(5, 150, 105, 0.08);
+            --warning-color: #d97706;
+            --warning-light: rgba(217, 119, 6, 0.08);
+            --danger-color: #dc2626;
+            --danger-light: rgba(220, 38, 38, 0.08);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            --gradient-primary: linear-gradient(135deg, #3042FB 0%, #1e2ce6 100%);
+            --transition-fast: 0.15s ease-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--gradient-primary);
+            padding: 1rem 0;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 2rem;
+        }
+
+        .navbar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .nav-tab {
+            padding: 0.75rem 1.25rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all var(--transition-fast);
+        }
+
+        .nav-tab:hover, .nav-tab.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-box {
+            background: var(--primary-light);
+            padding: 20px;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-fast);
+        }
+
+        .stat-box:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .status-ok { color: var(--success-color); }
+        .status-unhealthy { color: var(--danger-color); }
+
+        /* Tables */
+        .table-container {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-light);
+            transition: background var(--transition-fast);
+        }
+
+        tbody tr:hover {
+            background: var(--background-soft);
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-static {
+            background: var(--primary-light);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .badge-discoverable {
+            background: var(--warning-light);
+            color: var(--warning-color);
+            border: 1px solid var(--warning-color);
+        }
+
+        .badge-comet {
+            background: #e0e7ff;
+            color: #4338ca;
+            border: 1px solid #4338ca;
+        }
+
+        .badge-json {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #065f46;
+        }
+
+        .health-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .health-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .health-healthy .health-dot {
+            background: var(--success-color);
+            box-shadow: 0 0 8px var(--success-color);
+        }
+
+        .health-unhealthy .health-dot {
+            background: var(--danger-color);
+            box-shadow: 0 0 8px var(--danger-color);
+        }
+
+        .latency {
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-weight: 500;
+        }
+
+        .latency-good { color: var(--success-color); }
+        .latency-ok { color: var(--warning-color); }
+        .latency-bad { color: var(--danger-color); }
+        .latency-unknown { color: var(--text-muted); }
+
+        .url-text {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: 'SF Mono', Monaco, monospace;
+        }
+
+        .last-updated {
+            text-align: right;
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+
+        /* Request History */
+        .request-row-success {
+            background: var(--success-light);
+        }
+
+        .request-row-error {
+            background: var(--danger-light);
+        }
+
+        .timestamp {
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-tab {
+                width: 100%;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-brand">🚀 Load-Aware Proxy</div>
+            <div class="nav-tabs">
+                <button class="nav-tab active" onclick="switchTab('overview')">📊 Overview</button>
+                <button class="nav-tab" onclick="switchTab('requests')">📜 Request History</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Overview Tab -->
+        <div id="overview-tab" class="tab-content active">
+            <header>
+                <h1>Proxy Status</h1>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-label">Status</div>
+                        <div class="stat-value" id="overallStatus">Loading...</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Healthy Nodes</div>
+                        <div class="stat-value" id="healthyNodes">-</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Total Requests</div>
+                        <div class="stat-value" id="totalRequests">-</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Uptime</div>
+                        <div class="stat-value" id="uptime">-</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Node Name</th>
+                            <th>Type</th>
+                            <th>Health</th>
+                            <th>Comet RPC Latency</th>
+                            <th>JSON-RPC Latency</th>
+                            <th>Requests</th>
+                            <th>Failures</th>
+                        </tr>
+                    </thead>
+                    <tbody id="nodesTable">
+                        <tr>
+                            <td colspan="7" style="text-align: center; padding: 40px;">Loading nodes...</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="last-updated" id="lastUpdated">Last updated: Never</div>
+            </div>
+        </div>
+
+        <!-- Request History Tab -->
+        <div id="requests-tab" class="tab-content">
+            <header>
+                <h1>Request History</h1>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-label">Total Requests</div>
+                        <div class="stat-value" id="reqStatTotal">-</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Successful</div>
+                        <div class="stat-value status-ok" id="reqStatSuccess">-</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Failed</div>
+                        <div class="stat-value status-unhealthy" id="reqStatFailed">-</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Avg Latency</div>
+                        <div class="stat-value" id="reqStatLatency">-</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Type</th>
+                            <th>Path</th>
+                            <th>Node</th>
+                            <th>Status</th>
+                            <th>Latency</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requestsTable">
+                        <tr>
+                            <td colspan="6" style="text-align: center; padding: 40px;">Loading requests...</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="last-updated" id="requestsLastUpdated">Last updated: Never</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentTab = 'overview';
+
+        function switchTab(tab) {
+            currentTab = tab;
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(tab + '-tab').classList.add('active');
+            event.target.classList.add('active');
+
+            if (tab === 'requests') {
+                updateRequestHistory();
+            }
+        }
+
+        function formatLatency(latency) {
+            if (latency === null || latency === undefined) {
+                return '<span class="latency latency-unknown">N/A</span>';
+            }
+            const value = latency.toFixed(2);
+            let cssClass = 'latency-good';
+            if (latency > 200) cssClass = 'latency-bad';
+            else if (latency > 50) cssClass = 'latency-ok';
+            return `<span class="latency ${cssClass}">${value} ms</span>`;
+        }
+
+        function formatUptime(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            return `${hours}h ${minutes}m ${secs}s`;
+        }
+
+        function formatTimestamp(timestamp) {
+            const date = new Date(timestamp);
+            return date.toLocaleString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit' 
+            });
+        }
+
+        async function updateDashboard() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+
+                // Update overview stats
+                const healthyCount = data.nodes.filter(n => n.is_healthy).length;
+                document.getElementById('overallStatus').textContent = healthyCount > 0 ? 'OK' : 'Unhealthy';
+                document.getElementById('overallStatus').className = 'stat-value ' + (healthyCount > 0 ? 'status-ok' : 'status-unhealthy');
+                document.getElementById('healthyNodes').textContent = `${healthyCount} / ${data.nodes.length}`;
+                document.getElementById('totalRequests').textContent = (data.total_comet_requests + data.total_json_rpc_requests).toLocaleString();
+                document.getElementById('uptime').textContent = formatUptime(data.uptime_seconds);
+
+                // Update nodes table
+                const tbody = document.getElementById('nodesTable');
+                if (data.nodes.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="7" class="empty-state"><div class="empty-state-icon">📭</div><div>No nodes available</div></td></tr>';
+                } else {
+                    tbody.innerHTML = data.nodes.map(node => `
+                        <tr>
+                            <td>
+                                <strong>${node.name}</strong>
+                                <div class="url-text">${node.comet_rpc_url}</div>
+                            </td>
+                            <td>
+                                <span class="badge badge-${node.node_type}">${node.node_type}</span>
+                            </td>
+                            <td>
+                                <div class="health-indicator health-${node.is_healthy ? 'healthy' : 'unhealthy'}">
+                                    <span class="health-dot"></span>
+                                    ${node.is_healthy ? 'Healthy' : 'Unhealthy'}
+                                </div>
+                            </td>
+                            <td>${formatLatency(node.comet_rpc_latency_ms)}</td>
+                            <td>${formatLatency(node.json_rpc_latency_ms)}</td>
+                            <td>${node.request_count.toLocaleString()}</td>
+                            <td>${node.consecutive_failures} / ${node.times_marked_unhealthy}</td>
+                        </tr>
+                    `).join('');
+                }
+
+                document.getElementById('lastUpdated').textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+            } catch (error) {
+                console.error('Failed to update dashboard:', error);
+            }
+        }
+
+        async function updateRequestHistory() {
+            try {
+                // Fetch stats
+                const statsResponse = await fetch('/api/requests/stats');
+                const stats = await statsResponse.json();
+
+                document.getElementById('reqStatTotal').textContent = stats.total_requests.toLocaleString();
+                document.getElementById('reqStatSuccess').textContent = stats.successful_requests.toLocaleString();
+                document.getElementById('reqStatFailed').textContent = stats.failed_requests.toLocaleString();
+                document.getElementById('reqStatLatency').textContent = stats.avg_latency_ms ? 
+                    stats.avg_latency_ms.toFixed(2) + ' ms' : 'N/A';
+
+                // Fetch recent requests
+                const requestsResponse = await fetch('/api/requests');
+                const requestsData = await requestsResponse.json();
+
+                const tbody = document.getElementById('requestsTable');
+                if (requestsData.requests.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="6" class="empty-state"><div class="empty-state-icon">📭</div><div>No requests logged yet</div></td></tr>';
+                } else {
+                    tbody.innerHTML = requestsData.requests.map(req => `
+                        <tr class="${req.success ? 'request-row-success' : 'request-row-error'}">
+                            <td class="timestamp">${formatTimestamp(req.timestamp)}</td>
+                            <td><span class="badge badge-${req.rpc_type === 'comet' ? 'comet' : 'json'}">${req.rpc_type}</span></td>
+                            <td><code>${req.path}</code></td>
+                            <td>
+                                <strong>${req.node_name}</strong>
+                                <div class="url-text">${req.node_url}</div>
+                            </td>
+                            <td>${req.status_code}</td>
+                            <td>${formatLatency(req.latency_ms)}</td>
+                        </tr>
+                    `).join('');
+                }
+
+                document.getElementById('requestsLastUpdated').textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+            } catch (error) {
+                console.error('Failed to update request history:', error);
+            }
+        }
+
+        // Update immediately and then every 3 seconds
+        updateDashboard();
+        setInterval(() => {
+            updateDashboard();
+            if (currentTab === 'requests') {
+                updateRequestHistory();
+            }
+        }, 3000);
+    </script>
+</body>
+</html>
+
